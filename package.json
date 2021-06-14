@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-incr-meanstdev",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Compute an arithmetic mean and corrected sample standard deviation incrementally.",
   "license": "Apache-2.0",
   "author": {
