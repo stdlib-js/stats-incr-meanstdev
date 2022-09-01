@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,16 +16,31 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { ArrayLike } from '@stdlib/types/array';
 
 /**
-* Compute an arithmetic mean and corrected sample standard deviation incrementally.
+* If provided a value, the accumulator function returns updated results. If not provided a value, the accumulator function returns the current results.
 *
-* @module @stdlib/stats-incr-meanstdev
+* ## Notes
+*
+* -   If provided `NaN`, the arithmetic mean and corrected sample standard deviation values are equal to `NaN` for all future invocations.
+*
+* @param x - input value
+* @returns output array or null
+*/
+type accumulator = ( x?: number ) => ArrayLike<number> | null;
+
+/**
+* Returns an accumulator function which incrementally computes an arithmetic mean and corrected sample standard deviation.
+*
+* @param out - output array
+* @returns accumulator function
 *
 * @example
-* var incrmeanstdev = require( '@stdlib/stats-incr-meanstdev' );
-*
 * var accumulator = incrmeanstdev();
 *
 * var ms = accumulator();
@@ -46,12 +61,9 @@
 * ms = accumulator();
 * // returns [ 1.25, ~4.35 ]
 */
-
-// MODULES //
-
-var incrmeanstdev = require( './main.js' );
+declare function incrmeanstdev( out?: ArrayLike<number> ): accumulator;
 
 
 // EXPORTS //
 
-module.exports = incrmeanstdev;
+export = incrmeanstdev;
