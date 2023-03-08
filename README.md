@@ -30,10 +30,14 @@ The [arithmetic mean][arithmetic-mean] is defined as
 
 <!-- <equation class="equation" label="eq:arithmetic_mean" align="center" raw="\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i" alt="Equation for the arithmetic mean."> -->
 
-<div class="equation" align="center" data-raw-text="\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i" data-equation="eq:arithmetic_mean">
+```math
+\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i" data-equation="eq:arithmetic_mean">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@5ca648efa8739942a21b07ad7df1947cdd01b662/lib/node_modules/@stdlib/stats/incr/meanstdev/docs/img/equation_arithmetic_mean.svg" alt="Equation for the arithmetic mean.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -41,45 +45,41 @@ and the [corrected sample standard deviation][sample-stdev] is defined as
 
 <!-- <equation class="equation" label="eq:corrected_sample_standard_deviation" align="center" raw="s = \sqrt{\frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2}" alt="Equation for the corrected sample standard deviation."> -->
 
-<div class="equation" align="center" data-raw-text="s = \sqrt{\frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2}" data-equation="eq:corrected_sample_standard_deviation">
+```math
+s = \sqrt{\frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2}
+```
+
+<!-- <div class="equation" align="center" data-raw-text="s = \sqrt{\frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2}" data-equation="eq:corrected_sample_standard_deviation">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@5ca648efa8739942a21b07ad7df1947cdd01b662/lib/node_modules/@stdlib/stats/incr/meanstdev/docs/img/equation_corrected_sample_standard_deviation.svg" alt="Equation for the corrected sample standard deviation.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-incr-meanstdev
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-incrmeanstdev = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var incrmeanstdev = require( 'path/to/vendor/umd/stats-incr-meanstdev/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.incrmeanstdev;
-})();
-</script>
+var incrmeanstdev = require( '@stdlib/stats-incr-meanstdev' );
 ```
 
 #### incrmeanstdev( \[out] )
@@ -147,16 +147,11 @@ ms = accumulator();
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-buffer@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var Float64Array = require( '@stdlib/array-float64' );
+var ArrayBuffer = require( '@stdlib/array-buffer' );
+var incrmeanstdev = require( '@stdlib/stats-incr-meanstdev' );
 
 var offset;
 var acc;
@@ -201,11 +196,6 @@ for ( i = 0; i < N; i++ ) {
     ms = acc[ i ]();
     console.log( '%d\t%d', ms[ 0 ].toFixed( 3 ), ms[ 1 ].toFixed( 3 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -282,7 +272,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -304,13 +294,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/incr/mean]: https://github.com/stdlib-js/stats-incr-mean/tree/umd
+[@stdlib/stats/incr/mean]: https://github.com/stdlib-js/stats-incr-mean
 
-[@stdlib/stats/incr/meanvar]: https://github.com/stdlib-js/stats-incr-meanvar/tree/umd
+[@stdlib/stats/incr/meanvar]: https://github.com/stdlib-js/stats-incr-meanvar
 
-[@stdlib/stats/incr/mmeanstdev]: https://github.com/stdlib-js/stats-incr-mmeanstdev/tree/umd
+[@stdlib/stats/incr/mmeanstdev]: https://github.com/stdlib-js/stats-incr-mmeanstdev
 
-[@stdlib/stats/incr/stdev]: https://github.com/stdlib-js/stats-incr-stdev/tree/umd
+[@stdlib/stats/incr/stdev]: https://github.com/stdlib-js/stats-incr-stdev
 
 <!-- </related-links> -->
 
