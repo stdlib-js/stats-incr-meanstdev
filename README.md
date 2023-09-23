@@ -74,7 +74,7 @@ s = \sqrt{\frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2}
 ## Usage
 
 ```javascript
-import incrmeanstdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@esm/index.mjs';
+import incrmeanstdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@v0.1.0-esm/index.mjs';
 ```
 
 #### incrmeanstdev( \[out] )
@@ -151,7 +151,7 @@ ms = accumulator();
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 import ArrayBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-buffer@esm/index.mjs';
-import incrmeanstdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@esm/index.mjs';
+import incrmeanstdev from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@v0.1.0-esm/index.mjs';
 
 var offset;
 var acc;
