@@ -76,6 +76,11 @@ s = \sqrt{\frac{1}{n-1} \sum_{i=0}^{n-1} ( x_i - \bar{x} )^2}
 To use in Observable,
 
 ```javascript
+incrmeanstdev = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-incr-meanstdev/tags). For example,
+
+```javascript
 incrmeanstdev = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@v0.2.2-umd/browser.js' )
 ```
 
@@ -88,7 +93,7 @@ var incrmeanstdev = require( 'path/to/vendor/umd/stats-incr-meanstdev/index.js' 
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@v0.2.2-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -173,7 +178,7 @@ ms = accumulator();
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-buffer@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@v0.2.2-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-meanstdev@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
