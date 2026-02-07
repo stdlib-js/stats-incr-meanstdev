@@ -1,0 +1,4 @@
+// Copyright (c) 2026 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import t from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-array-like-object@v0.2.3-esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@v0.2.3-esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-nan@v0.2.3-esm/index.mjs";import r from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sqrt@v0.2.3-esm/index.mjs";function i(i){var n,m,d,o,l;if(0===arguments.length)n=[0,0];else{if(!t(i))throw new TypeError(s("1Ht9a",i));n=i}return o=0,d=0,l=0,function(t){if(0===arguments.length)return 0===l?null:(n[0]=d,1===l?(e(o)?n[1]=NaN:n[1]=0,n):(n[1]=r(o/(l-1)),n));if(o+=(m=t-d)*(t-(d+=m/(l+=1))),n[0]=d,l<2)return e(o)?n[1]=NaN:n[1]=0,n;return n[1]=r(o/(l-1)),n}}export{i as default};
+//# sourceMappingURL=index.mjs.map
